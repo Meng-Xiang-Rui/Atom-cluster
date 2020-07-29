@@ -6,16 +6,17 @@ fig, ax = plt.subplots()
 xdata, ydata = [], []
 line, = ax.plot([], [], '-r', animated=False)
 
-x = np.loadtxt(r"C:\Users\OptLa\Documents\Meng\\opt1.txt")
-y = np.loadtxt(r"C:\Users\OptLa\Documents\Meng\\opt2.txt")
+x = np.loadtxt(r"opt1.txt")
+y = np.loadtxt(r"opt2.txt")
 
 
 # x = np.linspace(9,15)
 # y = np.linspace(9,15)
 
 def init():
-    ax.set_xlim(8, 16)
-    ax.set_ylim(8, 16)
+    ax.set_xlim(0, 15)
+    ax.set_ylim(10, 20)
+    ax.grid(True)
     return line,
 
 def update(i):
